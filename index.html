@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone 14 Pro Max — Dissected</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. LOADER -->
+  <div id="loader">
+    <div class="loader-brand">IPHONE 14 PRO MAX</div>
+    <div class="loader-track">
+      <div id="loader-bar"></div>
+    </div>
+    <div id="loader-percent">0%</div>
+  </div>
+
+  <!-- 2. FIXED HEADER -->
+  <header class="site-header">
+    <nav>
+      <img src="apple-512.png" alt="Apple" class="nav-logo-img">
+      <ul class="nav-links">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Specs</a></li>
+        <li><a href="#" class="nav-cta">Buy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 3. HERO STANDALONE (100vh, solid black) -->
+  <section class="hero-standalone" id="hero">
+    <canvas id="hero-shader"></canvas>
+    <div class="hero-inner">
+      <span class="section-label">001 / Reveal</span>
+      <h1 class="hero-heading">
+        <span class="word">DISSECTED.</span>
+      </h1>
+      <p class="hero-tagline">Every atom. Accounted for.</p>
+      <div class="scroll-indicator">
+        <span class="scroll-label">SCROLL</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CANVAS (fixed, full viewport, starts hidden) -->
+  <div class="canvas-wrap" id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- 5. DARK OVERLAY (for stats section) -->
+  <div id="dark-overlay"></div>
+
+  <!-- 6. MARQUEE (fixed, bottom of viewport) -->
+  <div class="marquee-wrap" id="marquee" data-scroll-speed="-20">
+    <div class="marquee-text">
+      TEARDOWN&nbsp;—&nbsp;PRECISION&nbsp;—&nbsp;TITANIUM&nbsp;—&nbsp;A18&nbsp;PRO&nbsp;—&nbsp;TEARDOWN&nbsp;—&nbsp;PRECISION&nbsp;—&nbsp;TITANIUM&nbsp;—&nbsp;A18&nbsp;PRO&nbsp;—&nbsp;TEARDOWN&nbsp;—&nbsp;PRECISION&nbsp;—&nbsp;TITANIUM&nbsp;—&nbsp;A18&nbsp;PRO&nbsp;—&nbsp;
+    </div>
+  </div>
+
+  <!-- 7. SCROLL CONTAINER (900vh) -->
+  <div id="scroll-container">
+
+    <!-- Section 1: A18 Pro — slide-left, align-left -->
+    <section class="scroll-section section-content align-left"
+             data-enter="18" data-leave="32" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">002 / Chip</span>
+        <h2 class="section-heading">The brain<br>behind<br>the beast.</h2>
+        <p class="section-body">
+          A18 Pro. 3-nanometer architecture. Six cores that think
+          faster than you can imagine. Built not for benchmarks —
+          built for experiences that don't yet exist.
+        </p>
+        <span class="section-note">16-core Neural Engine &nbsp;·&nbsp; 1.7B transistors</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Camera — slide-right, align-right -->
+    <section class="scroll-section section-content align-right"
+             data-enter="34" data-leave="48" data-animation="slide-right">
+      <div class="section-inner">
+        <span class="section-label">003 / Optics</span>
+        <h2 class="section-heading">48 megapixels<br>of obsession.</h2>
+        <p class="section-body">
+          A Fusion camera system with five lens elements and a sensor
+          engineered for zero compromise. Macro. Portrait. Night.
+          Every shot, a decision in light.
+        </p>
+        <span class="section-note">f/1.78 aperture &nbsp;·&nbsp; 100% Focus Pixels</span>
+      </div>
+    </section>
+
+    <!-- Section 3: Titanium — fade-up, align-left -->
+    <section class="scroll-section section-content align-left"
+             data-enter="50" data-leave="62" data-animation="fade-up">
+      <div class="section-inner">
+        <span class="section-label">004 / Material</span>
+        <h2 class="section-heading">Grade 5<br>titanium.</h2>
+        <p class="section-body">
+          The same alloy used in spacecraft and surgical instruments.
+          Lighter than steel. Stronger than expectation. The frame
+          that refuses to yield.
+        </p>
+        <span class="section-note">Grade 5 &nbsp;·&nbsp; 6.9mm thin</span>
+      </div>
+    </section>
+
+    <!-- Section 4: Stats — stagger-up, full dark overlay -->
+    <section class="scroll-section section-stats"
+             data-enter="64" data-leave="76" data-animation="stagger-up"
+             data-overlay-enter="62" data-overlay-leave="78">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-number" data-value="48" data-decimals="0">0</span>
+            <span class="stat-suffix">MP</span>
+          </div>
+          <span class="stat-label">Main sensor</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-number" data-value="6.9" data-decimals="1">0</span>
+            <span class="stat-suffix">"</span>
+          </div>
+          <span class="stat-label">Display</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-number" data-value="5" data-decimals="0">0</span>
+            <span class="stat-suffix">×</span>
+          </div>
+          <span class="stat-label">Optical zoom</span>
+        </div>
+        <div class="stat">
+          <div class="stat-top">
+            <span class="stat-number" data-value="4422" data-decimals="0">0</span>
+            <span class="stat-suffix">mAh</span>
+          </div>
+          <span class="stat-label">Battery</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: CTA — clip-reveal, align-right, PERSISTS -->
+    <section class="scroll-section section-cta align-right"
+             data-enter="80" data-leave="96" data-animation="clip-reveal"
+             data-persist="true">
+      <div class="section-inner">
+        <span class="section-label">005 / Own It</span>
+        <h2 class="section-heading">iPhone 14<br>Pro Max.</h2>
+        <p class="section-body">
+          The most personal supercomputer ever made.
+        </p>
+        <a href="#" class="cta-button">Order Now →</a>
+        <span class="section-note">Starting at $1,199</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CDN — ORDER IS CRITICAL -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
